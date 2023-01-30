@@ -1,0 +1,59 @@
+snippet main "Create base main function"
+#!/bin/bash
+
+function main(){
+    $0
+}
+
+main "$@"
+
+endsnippet
+
+snippet online "Ping function"
+function online() {
+    ping -c 1 8.8.8.8 >/dev/null 2>&1
+}
+
+$0
+endsnippet
+
+snippet checkExec "Check $?"
+if [[ "$?" -eq 0 ]];then
+    $0
+fi
+endsnippet
+
+snippet print "echo"
+echo -e "$0"
+endsnippet
+
+snippet menu "Menu"
+echo -e "\nMenú Principal\n\n\t1.- $1\n\t2.- $2\n\t9.- Salir\n"
+read -p ": " op
+
+case $op in
+  1)
+    $0
+  ;;
+  2)
+  ;;
+  9)
+    echo "Saliendo..."
+    exit 0
+  ;;
+  *)
+    echo "Opción inválida"
+  ;;
+esac
+
+endsnippet
+
+snippet array "Array"
+$1=( "$2" "$0" )
+endsnippet
+
+snippet arrfor "for"
+for i in "${$0[@]}";do
+    $0
+done
+endsnippet

@@ -1,0 +1,17 @@
+# Lauch keybindings daemon
+# sxhkd &
+
+# Enable power management
+#xfce4-power-manager &
+
+# Fix cursor
+#xsetroot -cursor_name left_ptr
+
+nitrogen --restore &
+variety &
+setxkbmap -option grp:alt_shift_toggle latam,us -variant intl &
+picom -f &
+$HOME/.screenlayout/benq-dragon.sh
+
+
+

@@ -1,0 +1,18 @@
+snippet main "create main class"
+using System;
+
+class Program{
+    public static void Main(string[] args){
+	$0
+    }
+}
+
+endsnippet
+
+snippet sout "Print in console"
+Console.WriteLine($0);
+endsnippet
+
+snippet asout "Print in console with a variable"
+Console.WriteLine("$1", $0);
+endsnippet

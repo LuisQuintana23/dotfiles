@@ -1,0 +1,28 @@
+# In this file there are my custom alias, variables and programs
+#=======================================ALIAS PERSONALIZADOS==============================
+file_ayuda='$HOME/wiki/comandos_recordar.txt'
+alias open='xdg-open'
+alias ayuda="cat $file_ayuda"
+alias ayuda_edit="nvim $file_ayuda"
+alias instalar='sudo pacman -S'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias otra='alacritty --working-directory=./ &'
+alias expulsar='udisksctl power-off -b'
+alias py='python3'
+#copy the terminal output (Archlinux)
+alias copy='xclip -selection clipboard -i'
+alias get_ip='ip ad | awk "/inet 192.168.100/ {print $2}"'
+alias ipex='curl ifconfig.me'
+alias m='make'
+alias mr='make run'
+alias blue-connect='bluetoothctl connect D0:8A:55:12:E5:60'
+#copy file with progress bar
+#=======================================VARIABLES PERSONALIZADOS==============================
+export EDITOR=nvim
+export PRINTER=epson_l3150
+export PATH=$PATH:$HOME/scripts
+#==============================COMANDOS===================================
+
+#fortune | cowsay
+
+

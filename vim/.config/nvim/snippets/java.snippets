@@ -1,0 +1,92 @@
+snippet jmain "Create main class and main method with a hello word instruction"
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+	    $0
+	}
+}
+endsnippet
+
+snippet jclass "Create a class and a method with the same name"
+import java.util.*;
+
+class $1{
+	public static void $1() {
+	    $0
+	}
+}
+endsnippet
+
+snippet sout "System.out.println"
+System.out.println($0);
+endsnippet
+
+snippet isout "System.out.println("str")"
+System.out.println("$0");
+endsnippet
+
+snippet asout "System.out.println("str" + var)"
+System.out.println("$1" + $0);
+endsnippet
+
+snippet scan "create scanner" b
+Scanner $1 = new Scanner(System.in);
+
+$0
+
+$1.close();
+endsnippet
+
+snippet iscan "read" b
+int $1 = $0.nextInt();
+endsnippet
+
+snippet menu "Menu with a simple loop"
+int op = 0;
+boolean loop = true;
+boolean isInt = false;
+
+do{
+    System.out.println("Menú principal");
+    System.out.print("\t\n1. $1\t\n2. $2\t\n9. Salir\n\n: ");
+
+    isInt = scanner.hasNextInt();
+
+    if(isInt){
+
+	op = scanner.nextInt();
+
+	switch(op){
+	    case 1:
+		$0
+		break;
+
+	    case 2:
+		break;
+		
+	    case 9:
+		System.out.println("Saliendo...");
+		System.exit(0);
+		break;
+
+	    default:
+		System.out.println("Ingrese una opción válida");
+		break;
+	}
+
+    }else{
+	System.out.println("Opción inválida");
+	scanner.nextLine();//limpiar buffer
+    }
+
+}while(loop && op != 9);
+
+endsnippet
+
+
+snippet smethod "Create a class and a method with the same name"
+public static $1($2){
+    $0
+}
+endsnippet
