@@ -7,8 +7,13 @@ function install_yay(){
     (cd yay && makepkg -si PKGBUILD && rm -rf ../yay)
 }
 
-"$HOME"/scripts/update-list
 DIR="$HOME"/programs
 sudo pacman -S $(cat "$DIR"/.pacman.list)
-install_yay
+
+pacman -Qq yay 2> /dev/null
+# if yay is not installed
+if [[ "$?" -ne 0 ]];then 
+    install_yay
+fi
+
 yay -S $(cat "$DIR"/.yay.list)

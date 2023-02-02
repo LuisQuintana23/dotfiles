@@ -14,7 +14,7 @@ nvim -c 'PlugInstall'
 
 #coc needs node
 #install node
-sudo pacman -S nodejs npm
+sudo pacman -S nodejs npm --noconfirm
 sudo npm i -g npm n
 sudo n lts
 
