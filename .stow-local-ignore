@@ -21,6 +21,6 @@ _darcs
 
 \.git
 \.gitignore
-\.install.sh
-\fonts\fonts-install.sh
-\vim\plug-installer.sh
+
+
+

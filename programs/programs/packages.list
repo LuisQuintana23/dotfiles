@@ -14,8 +14,10 @@ bspwm
 bumblebee
 check
 debugedit
+discord
 dmenu
 docker
+docker-compose
 dolphin
 dunst
 envycontrol
@@ -26,6 +28,7 @@ fzf
 gdm-prime-debug
 gnome-terminal
 go
+go-tools
 gobject-introspection
 google-chrome
 gparted
@@ -39,10 +42,14 @@ khotkeys
 kwallet-pam
 kwayland-integration
 kwrited
+lightdm-webkit2-theme-glorious
+lolcat
 lxappearance
 make
 meson
 midori
+mycli
+mysql-workbench
 nano
 neofetch
 neovim
@@ -69,6 +76,7 @@ plasma-thunderbolt
 plasma-vault
 polybar
 pulsemixer
+python-docutils
 qalculate-gtk
 qtile-extras-git
 qutebrowser
@@ -127,6 +135,7 @@ xorg-xrefresh
 xorg-xvinfo
 xorg-xwd
 xorg-xwud
+yad
 yay
 yelp-tools
 zram-generator

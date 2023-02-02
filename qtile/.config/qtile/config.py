@@ -18,7 +18,7 @@ mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 myTerm = "alacritty"      # My terminal of choice
 #myBrowser = "qutebrowser" # My browser of choice
 myBrowser = "google-chrome-stable --profile-directory='Default'" # My browser of choice
-interface = "wlan0"
+interface = "enp4s0"
 calculator = "qalculate-gtk"
 
 keys = [
@@ -153,6 +153,11 @@ keys = [
              desc='Launch volume control'
              ),
 
+         Key([mod, "control"], "q",
+             lazy.spawn('betterlockscreen -l dimblur'),
+             desc='Launch volume control'
+             ),
+
          Key([], 'XF86MonBrightnessUp', 
              lazy.spawn('brightnessctl s 2%+')),
          Key([], 'XF86MonBrightnessDown', 
@@ -260,9 +265,10 @@ def init_widgets_list():
                        ),
               # add logo .png
               widget.Image(
-                       filename = "~/.config/qtile/icons/python-white.png",
-                       scale = "False",
-                       mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm)}
+                       filename = "~/.config/qtile/icons/arch.png",
+                       scale = "True",
+                       mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm)},
+                       background = colors[0]
                        ),
               widget.Sep(
                        linewidth = 0,

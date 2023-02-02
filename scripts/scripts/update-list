@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DIR="$HOME/programs"
+
+pacman -Qqt > "$DIR"/packages.list
+pacman -Qqtm > "$DIR"/.yay.list
+pacman -Qqtn > "$DIR"/.pacman.list
+
+# remove yay from yay list
+sed -i '/^yay$/d' "$DIR"/.yay.list
