@@ -1,7 +1,6 @@
 auto-cpufreq
 betterlockscreen
 envycontrol
-gdm-prime-debug
 google-chrome
 lightdm-webkit2-theme-glorious
 mycli
@@ -11,4 +10,3 @@ siji-git
 snapd
 visual-studio-code-bin
 xfce-polkit
-yay

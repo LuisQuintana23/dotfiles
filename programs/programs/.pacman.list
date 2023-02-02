@@ -11,6 +11,7 @@ brightnessctl
 bspwm
 bumblebee
 check
+cups
 debugedit
 discord
 dmenu
@@ -74,6 +75,7 @@ qutebrowser
 ranger
 rofi
 rxvt-unicode
+sbsigntools
 scrot
 sddm-kcm
 stow

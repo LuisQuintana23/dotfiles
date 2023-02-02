@@ -1,0 +1,14 @@
+#!/bin/bash
+
+function install_yay(){
+    sudo pacman -Syy
+    sudo pacman -S --needed base-devel git --noconfirm
+    git clone https://aur.archlinux.org/yay.git
+    (cd yay && makepkg -si PKGBUILD && rm -rf ../yay)
+}
+
+"$HOME"/scripts/update-list
+DIR="$HOME"/programs
+sudo pacman -S $(cat "$DIR"/.pacman.list)
+install_yay
+yay -S $(cat "$DIR"/.yay.list)
